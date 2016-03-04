@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :images
+
   acts_as_messageable
 
   def mailboxer_name
@@ -14,4 +16,3 @@ class User < ActiveRecord::Base
    self.email
   end
 end
- 

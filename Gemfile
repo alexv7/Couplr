@@ -27,6 +27,9 @@ gem 'mailboxer'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'chosen-rails'
+
+gem 'carrierwave', '~> 0.10.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
