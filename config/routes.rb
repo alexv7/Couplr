@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'profiles/show'
 
   resources :images
   devise_for :users, controllers: { sessions: "users/sessions" }
   devise_scope :user do get 'users/sessions/index' => "user_session_index" end
+  devise_scope :user do get 'users/sessions/show' => "user_session_show" end
   # resources :users, :only => [:show]
   #get 'welcome/index'
   root 'welcome#index'
