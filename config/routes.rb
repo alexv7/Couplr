@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profiles/show'
   resources :images
   devise_for :users, controllers: { sessions: "users/sessions" }
   # resources :users, :only => [:show]
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
       post :untrash
     end
   end
+
+  get ':email', to: 'profiles#show', as: :profile
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
