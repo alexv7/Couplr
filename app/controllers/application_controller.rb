@@ -28,8 +28,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :nametwo
     devise_parameter_sanitizer.for(:account_update) << :nametwo
 
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:avatar, :avatar_cache, :remove_avatar) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:avatar, :avatar_cache, :remove_avatar) }
+    devise_parameter_sanitizer.for(:sign_up) << :avatar 
+    devise_parameter_sanitizer.for(:account_update) << :avatar
+
+    devise_parameter_sanitizer.for(:sign_up) << :avatar_cache
+    devise_parameter_sanitizer.for(:account_update) << :avatar_cache
+
+    devise_parameter_sanitizer.for(:sign_up) << :remove_avatar
+    devise_parameter_sanitizer.for(:account_update) << :remove_avatar
 
   end
 end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'profiles/show'
   resources :images
   devise_for :users, controllers: { sessions: "users/sessions" }
+
   # resources :users, :only => [:show]
   #get 'welcome/index'
   root 'welcome#index'
