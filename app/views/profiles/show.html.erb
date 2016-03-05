@@ -1,3 +1,4 @@
 <h1>HELLO!!</h1>
 <%=image_tag(@current_user.avatar,:size => "200x220")%>
 <%= link_to 'Edit Profile', edit_user_registration_path %>
+<%= link_to 'All the users', users_sessions_index_path %>
